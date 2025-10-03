@@ -23,8 +23,10 @@ public class Sessao
     private Time horario;
     @Column(name = "NR_PRECO")
     private Double preco;
-    @Column(name = "ID_SALA")
-    private Integer sala;
     @Column(name = "ID_FILME")
     private Long filme;
+
+    @ManyToOne
+    @JoinColumn(name = "id_sala")
+    private Sala sala;
 }

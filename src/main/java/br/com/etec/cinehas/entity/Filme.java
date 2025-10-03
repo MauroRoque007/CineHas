@@ -42,4 +42,8 @@ public class Filme
     private double avaliacao;
     @Column(name = "NR_PRECO")
     private double preco;
+
+    @ManyToOne
+    @JoinColumn(name = "id_sala")
+    private Sala sala;
 }

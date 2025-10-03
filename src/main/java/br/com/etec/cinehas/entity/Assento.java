@@ -21,7 +21,9 @@ public class Assento
     private String fileira;
     @Column(name = "NR_POSICAO")
     private  Integer posicao;
-    @Column(name = "ID_SALA")
-    private Integer sala;
+
+    @ManyToOne
+    @JoinColumn(name = "id_sala")
+    private Sala sala;
 
 }
